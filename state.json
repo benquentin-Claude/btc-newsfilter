@@ -1,5 +1,14 @@
 {
- "alerts": [],
+ "alerts": [
+  {
+   "summary": "Ledger untersucht mögliche Manipulation von Wallets nach Berichten über 86 Millionen Dollar gestohlener Krypto-Werte.",
+   "time": "2026-10-09T14:50:32.335478+00:00"
+  },
+  {
+   "summary": "US-Finanzminister Bessent kündigt Pläne an, eine mit dem Iran verbundene Krypto-Beschlagnahmung im Volumen von 1 Milliarde Dollar durchzusetzen.",
+   "time": "2026-10-09T14:50:32.545875+00:00"
+  }
+ ],
  "calendar": [
   {
    "country": "USD",
@@ -10,7 +19,7 @@
    "title": "FOMC Meeting Minutes"
   }
  ],
- "calendar_fetched": "2026-10-09T13:32:22.490549+00:00",
+ "calendar_fetched": "2026-10-09T14:50:28.047901+00:00",
  "seen": {
   "07526d56-76ba-51a7-95e9-7278adb2d0cc": "2026-10-09T02:00:23.702326+00:00",
   "080fccd9-970c-4f65-8e10-3001d1eaa306": "2026-10-09T03:41:57.132845+00:00",
@@ -59,11 +68,13 @@
   "a36853df-e107-44c1-88fa-f52ec9b248e7": "2026-10-09T04:51:32.176629+00:00",
   "a47b365a-c336-4cc9-a4e4-d1c72b286db0": "2026-10-09T10:34:21.951103+00:00",
   "a6796a02-4f4b-5df7-b293-0c207c3ba162": "2026-10-09T02:00:23.702342+00:00",
+  "a789ac80-84ae-4f33-a5ad-558a40deaad3": "2026-10-09T14:50:32.335446+00:00",
   "b3ebe7ab-e77d-49f2-9440-dd09c41a79a5": "2026-10-09T02:00:23.702277+00:00",
   "b5b233a4-3ec5-5dfc-af4e-223ae5d476f1": "2026-10-09T10:51:50.441734+00:00",
   "b9f4c6da-be9c-5152-bcc7-8912e742b674": "2026-10-09T02:00:23.702333+00:00",
   "bc10e656-ba11-5788-a384-bf87220eb6f4": "2026-10-09T02:00:23.702345+00:00",
   "bdcd701a-4bf0-4e55-a981-c7d4b47783d6": "2026-10-09T02:00:23.702285+00:00",
+  "c1150119-84a9-5340-b764-c1d2f6502e68": "2026-10-09T14:50:32.545848+00:00",
   "c7a709cd-1f39-59bb-95d0-49fe38b4eaf6": "2026-10-09T02:00:23.702339+00:00",
   "ca0211c5-1451-54ce-b4aa-86b264c5a76d": "2026-10-09T02:00:23.702337+00:00",
   "ced1ef49-68d2-554d-8fb7-c629d0ccae86": "2026-10-09T02:00:23.702340+00:00",
