@@ -2,7 +2,7 @@ name: newsfilter
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # alle 30 Minuten (privates Repo: passt in die 2.000 Freiminuten; GitHub startet oft einige Minuten später)
+    - cron: "*/10 * * * *"   # alle 10 Minuten (öffentliches Repo: unbegrenzt kostenlos; GitHub startet oft einige Minuten später)
   workflow_dispatch:          # manuell starten über den Actions-Tab
     inputs:
       test_ai:
