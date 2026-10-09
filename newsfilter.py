@@ -44,6 +44,7 @@ CALENDAR_REFRESH = dt.timedelta(hours=1)   # Kalender nur stündlich abrufen (An
 CALENDAR_WARN = dt.timedelta(minutes=30)   # so lange vor einem Termin warnen
 MAX_AGE = dt.timedelta(hours=3)            # ältere Meldungen ignorieren
 KEEP_SEEN = dt.timedelta(days=4)
+RECENT_ALERTS = dt.timedelta(hours=12)     # so lange gilt ein gemeldetes Ereignis als „schon gemeldet“
 DEFAULT_MODEL = "claude-haiku-5-5"  # Schlagzeilen bewerten ist eine einfache Aufgabe; günstig bei ~100 Läufen/Tag
 FALLBACK_MODELS = ("claude-opus-5-5", "claude-fable-5-1", "claude-sonnet-5-5")  # unterstützen fallbacks="default"
 
@@ -59,6 +60,7 @@ Bewerte jede Meldung danach, wie wahrscheinlich sie den Bitcoin-Kurs in den näc
 Kursrückblicke („BTC fiel um 3 %“) beschreiben Vergangenes und sind höchstens 2, außer sie melden ein neues Ereignis.
 Richtung: "bullish", "bearish" oder "neutral" für den BTC-Kurs.
 Zusammenfassung: ein kurzer deutscher Satz mit dem Kern der Meldung, ohne Floskeln.
+already_reported = true, wenn die Meldung dasselbe Ereignis beschreibt wie eine unter "bereits_gemeldet" oder wie eine Meldung mit kleinerer id in dieser Liste (andere Quelle, anderer Titel, gleiches Ereignis). Neue Entwicklungen zu einem Ereignis (z. B. neue Zahlen, Reaktion der Behörde) sind nicht already_reported.
 Gib für jede übergebene id genau einen Eintrag zurück."""
 
 SCHEMA = {
@@ -73,8 +75,9 @@ SCHEMA = {
                     "importance": {"type": "integer", "enum": [1, 2, 3, 4, 5]},
                     "direction": {"type": "string", "enum": ["bullish", "bearish", "neutral"]},
                     "summary_de": {"type": "string"},
+                    "already_reported": {"type": "boolean"},
                 },
-                "required": ["id", "importance", "direction", "summary_de"],
+                "required": ["id", "importance", "direction", "summary_de", "already_reported"],
                 "additionalProperties": False,
             },
         }
@@ -91,7 +94,7 @@ def now_utc():
 def load_state():
     if STATE_FILE.exists():
         return json.loads(STATE_FILE.read_text())
-    return {"seen": {}, "calendar": [], "calendar_fetched": None, "warned": []}
+    return {"seen": {}, "calendar": [], "calendar_fetched": None, "warned": [], "alerts": []}
 
 
 def save_state(state):
@@ -132,7 +135,7 @@ def fetch_news():
     return [i for i in items if i["id"] and i["title"]]
 
 
-def classify(items):
+def classify(items, recent_alerts=()):
     """Bewertet Meldungen in einem einzigen Aufruf. Gibt {id: Bewertung} zurück."""
     import anthropic
 
@@ -148,7 +151,8 @@ def classify(items):
             "format": {"type": "json_schema", "schema": SCHEMA},
         },
         system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": json.dumps(lines, ensure_ascii=False)}],
+        messages=[{"role": "user", "content": json.dumps(
+            {"bereits_gemeldet": list(recent_alerts), "meldungen": lines}, ensure_ascii=False)}],
     )
     if model.startswith(FALLBACK_MODELS):
         # bei einer Ablehnung übernimmt serverseitig automatisch ein anderes Modell
@@ -201,7 +205,9 @@ def run_news(state, dry_run, min_importance):
             print(f"  (ohne KI) {i['source']}: {i['title']}")
         return
 
-    ratings = classify(unique)
+    cutoff = (now_utc() - RECENT_ALERTS).isoformat()
+    state["alerts"] = [a for a in state.get("alerts", []) if a["time"] >= cutoff]
+    ratings = classify(unique, [a["summary"] for a in state["alerts"]])
     for i in unique:
         r = ratings.get(i["id"])
         if r is None:
@@ -209,8 +215,10 @@ def run_news(state, dry_run, min_importance):
         for other in fresh:
             if other["title"].lower() == i["title"].lower():
                 state["seen"][other["id"]] = now_utc().isoformat()
-        print(f"  {r['importance']} {r['direction']:8} {i['source']}: {i['title']}")
-        if r["importance"] >= min_importance:
+        dup = " (schon gemeldet)" if r["already_reported"] else ""
+        print(f"  {r['importance']} {r['direction']:8} {i['source']}: {i['title']}{dup}")
+        if r["importance"] >= min_importance and not r["already_reported"]:
+            state["alerts"].append({"time": now_utc().isoformat(), "summary": r["summary_de"]})
             arrow = {"bullish": "📈", "bearish": "📉"}.get(r["direction"], "➖")
             notify(f"{arrow} BTC {r['importance']}/5 · {i['source']}", f"{r['summary_de']}\n\n{i['title']}",
                    priority=5 if r["importance"] == 5 else 4,
@@ -262,7 +270,7 @@ def main():
         ratings = classify(newest)
         for i in newest:
             r = ratings.get(i["id"])
-            print(f"{r['importance']} {r['direction']:8} {i['title']}\n  → {r['summary_de']}" if r
+            print(f"{r['importance']} {r['direction']:8} {'(dup) ' if r['already_reported'] else ''}{i['title']}\n  → {r['summary_de']}" if r
                   else f"? (nicht bewertet) {i['title']}")
         if len(ratings) != len(newest):
             sys.exit("Nicht alle Meldungen wurden bewertet.")
