@@ -1,4 +1,5 @@
 {
+ "alerts": [],
  "calendar": [
   {
    "country": "USD",
@@ -9,7 +10,7 @@
    "title": "FOMC Meeting Minutes"
   }
  ],
- "calendar_fetched": "2026-10-09T12:28:18.727605+00:00",
+ "calendar_fetched": "2026-10-09T13:32:22.490549+00:00",
  "seen": {
   "07526d56-76ba-51a7-95e9-7278adb2d0cc": "2026-10-09T02:00:23.702326+00:00",
   "080fccd9-970c-4f65-8e10-3001d1eaa306": "2026-10-09T03:41:57.132845+00:00",
@@ -32,6 +33,7 @@
   "4111a5ec-5790-4c83-bdb4-348eb18f6767": "2026-10-09T02:00:23.702274+00:00",
   "4644feb9-2d5d-44bc-b91d-04c94021a384": "2026-10-09T12:28:22.586664+00:00",
   "46ca11cb-5296-4505-9a66-8130952f0ab1": "2026-10-09T02:00:23.702271+00:00",
+  "4e3b5e8e-e8ef-5580-b1f7-21d4724ea287": "2026-10-09T13:32:27.957606+00:00",
   "509665d2-cb9f-44aa-8613-3bb453bf8d11": "2026-10-09T02:00:23.702281+00:00",
   "51a07fe3-5b03-43fb-b701-458c81c226a5": "2026-10-09T02:00:23.702284+00:00",
   "56529b99-fa66-4524-addc-d88cdf2a0d88": "2026-10-09T02:00:23.702257+00:00",
@@ -83,6 +85,7 @@
   "https://bitcoinmagazine.com/?p=55718": "2026-10-09T02:00:23.702394+00:00",
   "https://bitcoinmagazine.com/?p=55723": "2026-10-09T02:00:23.702393+00:00",
   "https://bitcoinmagazine.com/?p=55727": "2026-10-09T02:00:23.702391+00:00",
+  "https://bitcoinmagazine.com/?p=55732": "2026-10-09T13:32:27.957650+00:00",
   "https://cointelegraph.com/magazine/chinas-p2p-stablecoin-wallets-surge-43x-koreas-450b-crypto-economy-asia-express": "2026-10-09T02:00:23.702288+00:00",
   "https://cointelegraph.com/magazine/crypto-lending-rises-again-but-have-they-solved-the-risks": "2026-10-09T02:00:23.702298+00:00",
   "https://cointelegraph.com/markets/bitcoin-etfs-outflow-largest-june-october": "2026-10-09T02:00:23.702311+00:00",
@@ -161,7 +164,8 @@
   "https://decrypt.co/?p=380554": "2026-10-09T09:07:06.071407+00:00",
   "https://decrypt.co/?p=380561": "2026-10-09T10:14:57.163476+00:00",
   "https://decrypt.co/?p=380568": "2026-10-09T12:06:29.106466+00:00",
-  "https://decrypt.co/?p=380569": "2026-10-09T11:52:49.301978+00:00"
+  "https://decrypt.co/?p=380569": "2026-10-09T11:52:49.301978+00:00",
+  "https://decrypt.co/?p=380574": "2026-10-09T13:32:27.957640+00:00"
  },
  "warned": []
 }
