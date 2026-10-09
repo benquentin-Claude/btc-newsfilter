@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "*/10 * * * *"   # alle 10 Minuten (GitHub startet geplante Läufe oft einige Minuten später)
   workflow_dispatch:          # manuell starten über den Actions-Tab
+    inputs:
+      test_ai:
+        description: "Nur die KI-Bewertung testen (5 neueste Meldungen, nichts senden)"
+        type: boolean
+        default: false
 
 concurrency:
   group: newsfilter
@@ -23,13 +28,14 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - run: python newsfilter.py
+      - run: python newsfilter.py ${{ inputs.test_ai && '--test-ai' || '' }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           MIN_IMPORTANCE: ${{ vars.MIN_IMPORTANCE }}
           CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
       - name: Zustand speichern
+        if: ${{ !inputs.test_ai }}
         run: |
           if ! git diff --quiet state.json 2>/dev/null || [ -n "$(git status --porcelain state.json)" ]; then
             git config user.name "newsfilter-bot"

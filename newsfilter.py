@@ -252,8 +252,21 @@ def run_calendar(state, dry_run):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--dry-run", action="store_true", help="nichts senden, Zustand nicht speichern")
+    p.add_argument("--test-ai", action="store_true", help="die 5 neuesten Meldungen bewerten und nur anzeigen")
     args = p.parse_args()
     min_importance = int(os.environ.get("MIN_IMPORTANCE") or 4)
+
+    if args.test_ai:
+        epoch = dt.datetime.min.replace(tzinfo=dt.timezone.utc)
+        newest = sorted(fetch_news(), key=lambda i: i["published"] or epoch, reverse=True)[:5]
+        ratings = classify(newest)
+        for i in newest:
+            r = ratings.get(i["id"])
+            print(f"{r['importance']} {r['direction']:8} {i['title']}\n  → {r['summary_de']}" if r
+                  else f"? (nicht bewertet) {i['title']}")
+        if len(ratings) != len(newest):
+            sys.exit("Nicht alle Meldungen wurden bewertet.")
+        return
 
     state = load_state()
     run_calendar(state, args.dry_run)
