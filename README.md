@@ -1,6 +1,6 @@
 # BTC-Newsfilter
 
-Läuft alle 10 Minuten in GitHub Actions, auch wenn der Mac aus ist.
+Läuft alle 30 Minuten in GitHub Actions (privates Repo; öffentlich wären alle 10 Minuten kostenlos möglich), auch wenn der Mac aus ist.
 
 1. Liest Krypto-News per RSS von CoinDesk, Cointelegraph, The Block, Decrypt und Bitcoin Magazine.
 2. Lässt neue Meldungen von Claude bewerten: Wichtigkeit von 1 bis 5, bullish, bearish oder neutral, dazu ein deutscher Satz als Zusammenfassung.
