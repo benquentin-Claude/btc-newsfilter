@@ -3,14 +3,78 @@
  "calendar": [
   {
    "country": "USD",
-   "date": "2026-10-07T14:00:00-04:00",
+   "date": "2026-10-14T08:30:00-04:00",
+   "forecast": "0.2%",
+   "impact": "High",
+   "previous": "0.3%",
+   "title": "Core CPI m/m"
+  },
+  {
+   "country": "USD",
+   "date": "2026-10-14T08:30:00-04:00",
+   "forecast": "2.5%",
+   "impact": "High",
+   "previous": "2.4%",
+   "title": "Core CPI y/y"
+  },
+  {
+   "country": "USD",
+   "date": "2026-10-14T08:30:00-04:00",
+   "forecast": "0.6%",
+   "impact": "High",
+   "previous": "0.4%",
+   "title": "CPI m/m"
+  },
+  {
+   "country": "USD",
+   "date": "2026-10-14T08:30:00-04:00",
+   "forecast": "3.6%",
+   "impact": "High",
+   "previous": "3.4%",
+   "title": "CPI y/y"
+  },
+  {
+   "country": "USD",
+   "date": "2026-10-15T08:30:00-04:00",
+   "forecast": "0.3%",
+   "impact": "High",
+   "previous": "0.2%",
+   "title": "Core PPI m/m"
+  },
+  {
+   "country": "USD",
+   "date": "2026-10-15T08:30:00-04:00",
+   "forecast": "0.5%",
+   "impact": "High",
+   "previous": "1.4%",
+   "title": "Core Retail Sales m/m"
+  },
+  {
+   "country": "USD",
+   "date": "2026-10-15T08:30:00-04:00",
+   "forecast": "0.5%",
+   "impact": "High",
+   "previous": "0.4%",
+   "title": "PPI m/m"
+  },
+  {
+   "country": "USD",
+   "date": "2026-10-15T08:30:00-04:00",
+   "forecast": "0.3%",
+   "impact": "High",
+   "previous": "1.2%",
+   "title": "Retail Sales m/m"
+  },
+  {
+   "country": "USD",
+   "date": "2026-10-15T23:30:00-04:00",
    "forecast": "",
    "impact": "High",
    "previous": "",
-   "title": "FOMC Meeting Minutes"
+   "title": "Fed Chairman Warsh Speaks"
   }
  ],
- "calendar_fetched": "2026-10-11T04:01:31.395767+00:00",
+ "calendar_fetched": "2026-10-11T05:05:12.450280+00:00",
  "seen": {
   "07526d56-76ba-51a7-95e9-7278adb2d0cc": "2026-10-09T02:00:23.702326+00:00",
   "080fccd9-970c-4f65-8e10-3001d1eaa306": "2026-10-09T03:41:57.132845+00:00",
