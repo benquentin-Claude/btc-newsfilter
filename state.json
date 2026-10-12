@@ -49,7 +49,7 @@
   {
    "country": "USD",
    "date": "2026-10-15T08:30:00-04:00",
-   "forecast": "0.5%",
+   "forecast": "0.6%",
    "impact": "High",
    "previous": "1.4%",
    "title": "Core Retail Sales m/m"
@@ -57,7 +57,7 @@
   {
    "country": "USD",
    "date": "2026-10-15T08:30:00-04:00",
-   "forecast": "0.5%",
+   "forecast": "0.6%",
    "impact": "High",
    "previous": "0.4%",
    "title": "PPI m/m"
@@ -79,7 +79,7 @@
    "title": "Fed Chairman Warsh Speaks"
   }
  ],
- "calendar_fetched": "2026-10-12T21:15:29.966108+00:00",
+ "calendar_fetched": "2026-10-12T22:17:41.133096+00:00",
  "seen": {
   "041f3da9-9496-420b-8a3a-081ece7aff50": "2026-10-12T11:05:20.212968+00:00",
   "07526d56-76ba-51a7-95e9-7278adb2d0cc": "2026-10-09T02:00:23.702326+00:00",
@@ -219,6 +219,8 @@
   "https://bitcoinmagazine.com/?p=55779": "2026-10-12T15:44:17.234498+00:00",
   "https://bitcoinmagazine.com/?p=55784": "2026-10-12T17:40:00.514290+00:00",
   "https://bitcoinmagazine.com/?p=55787": "2026-10-12T19:57:34.331642+00:00",
+  "https://bitcoinmagazine.com/?p=55791": "2026-10-12T22:17:45.458490+00:00",
+  "https://bitcoinmagazine.com/?p=55795": "2026-10-12T22:17:45.458462+00:00",
   "https://cointelegraph.com/magazine/chinas-p2p-stablecoin-wallets-surge-43x-koreas-450b-crypto-economy-asia-express": "2026-10-09T02:00:23.702288+00:00",
   "https://cointelegraph.com/magazine/crypto-lending-rises-again-but-have-they-solved-the-risks": "2026-10-09T02:00:23.702298+00:00",
   "https://cointelegraph.com/magazine/france-is-worlds-most-dangerous-place-for-bitcoiners-90-attacks-in-7-months": "2026-10-09T13:56:46.753717+00:00",
