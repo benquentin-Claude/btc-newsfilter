@@ -83,7 +83,7 @@
    "title": "Fed Chairman Warsh Speaks"
   }
  ],
- "calendar_fetched": "2026-10-13T08:12:56.944996+00:00",
+ "calendar_fetched": "2026-10-13T09:23:45.776603+00:00",
  "seen": {
   "03f2415a-197d-581c-a65e-2186f172c02d": "2026-10-13T02:03:10.286450+00:00",
   "041f3da9-9496-420b-8a3a-081ece7aff50": "2026-10-12T11:05:20.212968+00:00",
@@ -103,7 +103,6 @@
   "2c1adb42-6fb6-5b1f-a8d8-e67b119f0012": "2026-10-12T12:38:37.912161+00:00",
   "2e26fc78-749a-4054-827b-2b2e2a6b29a7": "2026-10-13T04:58:08.178125+00:00",
   "33cdcf0b-beb8-4b7c-a85b-14769bc7ccbb": "2026-10-09T09:26:22.692998+00:00",
-  "37f097ac-1c35-4838-8e1e-775dce346625": "2026-10-09T09:07:06.071377+00:00",
   "39696a36-0225-44ff-b1f7-543a1f5c8301": "2026-10-12T08:33:05.075348+00:00",
   "39ffaa1a-584c-45f2-8c5e-0a7ceffe3536": "2026-10-09T11:52:49.301945+00:00",
   "3ad98db0-4f90-46a3-ad33-d7d38f95f379": "2026-10-10T03:19:19.578822+00:00",
@@ -212,13 +211,13 @@
   "https://cointelegraph.com/news/standard-chartered-rlusd-custody-lmax-deal": "2026-10-12T09:52:43.721554+00:00",
   "https://cointelegraph.com/news/tech-chief-says-eu-can-fend-off-rogue-ai-risk-report": "2026-10-10T09:01:23.467952+00:00",
   "https://cointelegraph.com/news/thorchain-tether-freezing-usdt-addresses": "2026-10-09T19:15:04.322610+00:00",
+  "https://cointelegraph.com/news/uk-court-chinese-law-61k-bitcoin-fraud-victims": "2026-10-13T09:23:50.092145+00:00",
   "https://cointelegraph.com/news/uk-sanctions-crypto-exchanges-russian-illicit-funds": "2026-10-09T10:51:50.441727+00:00",
   "https://cointelegraph.com/news/wealthy-investors-crypto-advisers-okx-strategy-buybacks": "2026-10-09T15:59:43.517307+00:00",
   "https://cointelegraph.com/news/what-happened-in-crypto-today": "2026-10-13T06:08:17.866185+00:00",
   "https://cointelegraph.com/news/xrp-ledger-defends-emergency-patch-for-unlimited-xrp-bug": "2026-10-12T01:32:22.163696+00:00",
   "https://cointelegraph.com/news/xrp-treasury-evernorth-rise-nasdaq-opening": "2026-10-12T14:53:40.198969+00:00",
   "https://decrypt.co/?p=380484": "2026-10-12T16:04:38.124756+00:00",
-  "https://decrypt.co/?p=380554": "2026-10-09T09:07:06.071407+00:00",
   "https://decrypt.co/?p=380561": "2026-10-09T10:14:57.163476+00:00",
   "https://decrypt.co/?p=380568": "2026-10-09T12:06:29.106466+00:00",
   "https://decrypt.co/?p=380569": "2026-10-09T11:52:49.301978+00:00",
@@ -250,7 +249,8 @@
   "https://decrypt.co/?p=380752": "2026-10-12T19:16:10.289802+00:00",
   "https://decrypt.co/?p=380768": "2026-10-12T20:50:23.021681+00:00",
   "https://decrypt.co/?p=380776": "2026-10-12T21:37:27.186803+00:00",
-  "https://decrypt.co/?p=380789": "2026-10-12T21:56:16.137480+00:00"
+  "https://decrypt.co/?p=380789": "2026-10-12T21:56:16.137480+00:00",
+  "https://decrypt.co/?p=380802": "2026-10-13T09:23:50.092173+00:00"
  },
  "warned": []
 }
