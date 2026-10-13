@@ -27,6 +27,14 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+      - name: Wächter für den Handels-Bot (liest nur den Herzschlag, kann nicht handeln)
+        if: ${{ !inputs.test_ai }}
+        continue-on-error: true
+        run: python waechter.py
+        env:
+          BOT_HEARTBEAT_TOPIC: ${{ secrets.BOT_HEARTBEAT_TOPIC }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          BOT_NAME: ${{ vars.BOT_NAME }}
       - run: pip install -r requirements.txt
       - run: python newsfilter.py ${{ inputs.test_ai && '--test-ai' || '' }}
         env:
