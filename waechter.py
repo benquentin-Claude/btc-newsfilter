@@ -9,6 +9,8 @@ Umgebungsvariablen:
   BOT_HEARTBEAT_TOPIC  geheimer Steuerkanal des Bots (GitHub-Secret). Fehlt er, tut das Skript nichts.
   NTFY_TOPIC           Kanal für den Alarm aufs Handy (GitHub-Secret)
   BOT_NAME             Name des Bots in den Meldungen (GitHub-Variable, Standard „Handels-Bot“)
+  WAECHTER_SESSION_MIN, WAECHTER_IDLE_MIN
+                       andere Grenzen in Minuten (GitHub-Variablen, z. B. kurz für einen Probealarm)
 
 Die Ausgabe ist öffentlich sichtbar. Sie nennt deshalb weder Kanäle noch Inhalte, nur das Ergebnis in einem Wort.
 """
@@ -34,7 +36,15 @@ def in_session(now):
     return ny.weekday() < 5 and dt.time(8, 40) <= ny.time() <= dt.time(16, 20)
 
 
-def decide(now_ts, messages, session):
+def limit(name, default):
+    """Grenze in Sekunden: aus der Umgebung (dort in Minuten), sonst der Standardwert."""
+    try:
+        return float(os.environ[name]) * 60
+    except (KeyError, ValueError):
+        return default
+
+
+def decide(now_ts, messages, session, session_limit=SESSION_LIMIT, idle_limit=IDLE_LIMIT):
     """Gibt (Entscheidung, Minuten seit dem letzten Herzschlag, Betriebsart) zurück.
     Entscheidung: „ok“, „alarm“, „still“ (Alarm läuft schon) oder „entwarnung“."""
     def last(title):
@@ -44,7 +54,7 @@ def decide(now_ts, messages, session):
     beat, alarm, clear = (beats[-1]["time"] if beats else None), last(ALARM), last(CLEAR)
     mode = str(beats[-1].get("message", "")).split(" ")[0] if beats else ""
     age = None if beat is None else (now_ts - beat) / 60
-    if beat is None or now_ts - beat > (SESSION_LIMIT if session else IDLE_LIMIT):
+    if beat is None or now_ts - beat > (session_limit if session else idle_limit):
         repeat = SESSION_REPEAT if session else IDLE_REPEAT
         return ("alarm" if alarm is None or now_ts - alarm >= repeat else "still"), age, mode
     if alarm is not None and beat > alarm and (clear is None or clear < alarm):
@@ -71,7 +81,8 @@ def run(now, heartbeat_topic, alarm_topic, fetch=fetch, name="Handels-Bot"):
         if m.get("event") == "message" and isinstance(m.get("time"), (int, float)):
             messages.append(m)
     session = in_session(now)
-    verdict, age, mode = decide(now.timestamp(), messages, session)
+    verdict, age, mode = decide(now.timestamp(), messages, session, limit("WAECHTER_SESSION_MIN", SESSION_LIMIT),
+                                limit("WAECHTER_IDLE_MIN", IDLE_LIMIT))
     paper = mode == "papier"
 
     def send(topic, title, message="", priority=1):

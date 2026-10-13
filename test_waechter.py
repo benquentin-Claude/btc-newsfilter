@@ -70,6 +70,16 @@ class Waechter(unittest.TestCase):
         self.assertEqual(w.run(T, "steuer", "handy", net, name="Mein Bot"), "entwarnung")
         self.assertEqual([m["title"] for m in net.sent], ["Mein Bot ist wieder da", w.CLEAR])
 
+    def test_grenzen_aus_der_umgebung(self):
+        import os
+        from unittest import mock
+        self.assertEqual(w.limit("WAECHTER_IDLE_MIN", 99), 99)
+        with mock.patch.dict(os.environ, {"WAECHTER_IDLE_MIN": "", "WAECHTER_SESSION_MIN": "6"}):
+            self.assertEqual(w.limit("WAECHTER_IDLE_MIN", 99), 99)          # leere Variable = Standard
+            self.assertEqual(w.limit("WAECHTER_SESSION_MIN", 99), 360)
+            self.assertEqual(w.run(T, "steuer", "handy", Net([beat(5)])), "ok")
+            self.assertEqual(w.run(T, "steuer", "handy", Net([beat(8)])), "alarm")   # mit der kurzen Grenze schon nach 6 Minuten
+
     def test_ohne_einrichtung_passiert_nichts(self):
         self.assertEqual(w.main(), 0)
 

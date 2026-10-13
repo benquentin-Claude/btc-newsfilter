@@ -35,6 +35,8 @@ jobs:
           BOT_HEARTBEAT_TOPIC: ${{ secrets.BOT_HEARTBEAT_TOPIC }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           BOT_NAME: ${{ vars.BOT_NAME }}
+          WAECHTER_SESSION_MIN: ${{ vars.WAECHTER_SESSION_MIN }}
+          WAECHTER_IDLE_MIN: ${{ vars.WAECHTER_IDLE_MIN }}
       - run: pip install -r requirements.txt
       - run: python newsfilter.py ${{ inputs.test_ai && '--test-ai' || '' }}
         env:
