@@ -83,7 +83,7 @@
    "title": "Fed Chairman Warsh Speaks"
   }
  ],
- "calendar_fetched": "2026-10-13T09:23:45.776603+00:00",
+ "calendar_fetched": "2026-10-13T10:33:50.418628+00:00",
  "seen": {
   "03f2415a-197d-581c-a65e-2186f172c02d": "2026-10-13T02:03:10.286450+00:00",
   "041f3da9-9496-420b-8a3a-081ece7aff50": "2026-10-12T11:05:20.212968+00:00",
@@ -201,7 +201,9 @@
   "https://cointelegraph.com/news/ledger-confirms-unauthorized-hardware-implant-losses-may-exceed-86m": "2026-10-11T09:26:37.717297+00:00",
   "https://cointelegraph.com/news/ledger-implant-bitcoin-etfs-hardware-wallets": "2026-10-12T14:22:09.102761+00:00",
   "https://cointelegraph.com/news/ledger-investigates-fund-losses-linked-to-southeast-asian-reseller-warns-users": "2026-10-09T17:25:40.342378+00:00",
+  "https://cointelegraph.com/news/mediamarkt-pulls-ledger-wallet-security-incident": "2026-10-13T10:33:54.938793+00:00",
   "https://cointelegraph.com/news/meta-launches-muse-wonder-ai-models-challenging-top-rivals": "2026-10-13T02:29:00.339735+00:00",
+  "https://cointelegraph.com/news/metaplanet-329m-convertible-bonds-pay-debt-share-buybacks": "2026-10-13T10:33:54.938761+00:00",
   "https://cointelegraph.com/news/michael-saylor-strategy-250-btc-buy": "2026-10-12T12:38:37.667483+00:00",
   "https://cointelegraph.com/news/sam-altman-backed-bitcoin-life-insurer-meanwhile-raises-more-funds": "2026-10-10T07:27:00.558730+00:00",
   "https://cointelegraph.com/news/saylors-teases-strategy-bitcoin-buying-after-ending-september-with-strc-buybacks": "2026-10-11T17:25:19.883506+00:00",
@@ -218,7 +220,6 @@
   "https://cointelegraph.com/news/xrp-ledger-defends-emergency-patch-for-unlimited-xrp-bug": "2026-10-12T01:32:22.163696+00:00",
   "https://cointelegraph.com/news/xrp-treasury-evernorth-rise-nasdaq-opening": "2026-10-12T14:53:40.198969+00:00",
   "https://decrypt.co/?p=380484": "2026-10-12T16:04:38.124756+00:00",
-  "https://decrypt.co/?p=380561": "2026-10-09T10:14:57.163476+00:00",
   "https://decrypt.co/?p=380568": "2026-10-09T12:06:29.106466+00:00",
   "https://decrypt.co/?p=380569": "2026-10-09T11:52:49.301978+00:00",
   "https://decrypt.co/?p=380574": "2026-10-09T13:32:27.957640+00:00",
@@ -250,7 +251,8 @@
   "https://decrypt.co/?p=380768": "2026-10-12T20:50:23.021681+00:00",
   "https://decrypt.co/?p=380776": "2026-10-12T21:37:27.186803+00:00",
   "https://decrypt.co/?p=380789": "2026-10-12T21:56:16.137480+00:00",
-  "https://decrypt.co/?p=380802": "2026-10-13T09:23:50.092173+00:00"
+  "https://decrypt.co/?p=380802": "2026-10-13T09:23:50.092173+00:00",
+  "https://decrypt.co/?p=380808": "2026-10-13T10:33:54.938803+00:00"
  },
  "warned": []
 }
