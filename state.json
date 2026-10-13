@@ -19,6 +19,10 @@
   {
    "summary": "Südkorea sperrt 27 Krypto-Börsen, darunter Bitmart und Kucoin, was regulatorischen Druck und Abflüsse aus dem Handel bedeuten kann.",
    "time": "2026-10-13T12:09:44.373266+00:00"
+  },
+  {
+   "summary": "Strive kauft 3.311 BTC für 280 Mio. $ und hält nun 32.773 BTC, der größte Zukauf seit Januar.",
+   "time": "2026-10-13T13:46:25.736734+00:00"
   }
  ],
  "calendar": [
@@ -105,6 +109,7 @@
   "14618517-c7cb-4c70-994c-766e857babfe": "2026-10-12T10:43:33.787430+00:00",
   "1c45856a-ceaf-5af6-971b-4bad6432b49d": "2026-10-09T16:23:03.384472+00:00",
   "1cdf8919-b024-4214-96dc-285c2b12431a": "2026-10-12T11:30:17.569277+00:00",
+  "200fd462-f5cb-5d34-b734-daa2e57d4774": "2026-10-13T13:46:25.736729+00:00",
   "23240199-0880-42de-b0f0-1c12e9d8ab78": "2026-10-12T04:51:31.008546+00:00",
   "23ff164d-cfe9-4bc6-abde-9a171a31f831": "2026-10-12T10:43:33.787402+00:00",
   "24eb6f9b-4621-4365-8d12-918a112163c9": "2026-10-13T04:31:02.878467+00:00",
@@ -118,7 +123,6 @@
   "45fbeb61-149b-4110-b4c7-cee358f9047c": "2026-10-12T11:05:20.212994+00:00",
   "462a7cc3-37dd-5058-9eb3-c0545f891b73": "2026-10-13T11:49:50.037157+00:00",
   "48250d8b-5695-409c-ba5f-6ae1d502f00a": "2026-10-13T09:49:37.943219+00:00",
-  "4e3b5e8e-e8ef-5580-b1f7-21d4724ea287": "2026-10-09T13:32:27.957606+00:00",
   "4e9b246f-0e52-5130-8c03-1605c2c41702": "2026-10-10T18:48:51.863699+00:00",
   "571d7c1f-546e-5212-a63a-b6dcfe24686f": "2026-10-09T18:54:10.217804+00:00",
   "5b66c6bb-e6a9-4b0f-b645-4d6e5b3171ee": "2026-10-10T04:26:50.358600+00:00",
@@ -166,7 +170,6 @@
   "f0366744-3d6f-467b-bb28-8e391f50ff1d": "2026-10-12T15:44:17.234471+00:00",
   "f0c10ca7-ee9b-46e8-9186-4bf11dd551ca": "2026-10-11T16:26:24.714675+00:00",
   "f8e752d9-8b7d-5e6d-8ceb-475c4467e8d0": "2026-10-12T09:52:43.721585+00:00",
-  "https://bitcoinmagazine.com/?p=55732": "2026-10-09T13:32:27.957650+00:00",
   "https://bitcoinmagazine.com/?p=55735": "2026-10-09T13:56:46.753764+00:00",
   "https://bitcoinmagazine.com/?p=55740": "2026-10-09T13:56:46.753758+00:00",
   "https://bitcoinmagazine.com/?p=55743": "2026-10-09T13:56:46.753751+00:00",
@@ -184,7 +187,10 @@
   "https://bitcoinmagazine.com/?p=55791": "2026-10-12T22:17:45.458490+00:00",
   "https://bitcoinmagazine.com/?p=55795": "2026-10-12T22:17:45.458462+00:00",
   "https://bitcoinmagazine.com/?p=55798": "2026-10-13T11:23:13.702359+00:00",
+  "https://bitcoinmagazine.com/?p=55808": "2026-10-13T13:46:25.775125+00:00",
+  "https://bitcoinmagazine.com/?p=55811": "2026-10-13T13:46:25.775102+00:00",
   "https://cointelegraph.com/magazine/france-is-worlds-most-dangerous-place-for-bitcoiners-90-attacks-in-7-months": "2026-10-09T13:56:46.753717+00:00",
+  "https://cointelegraph.com/magazine/is-bitcoin-kidding-itself-about-the-lightning-network": "2026-10-13T13:46:25.736672+00:00",
   "https://cointelegraph.com/magazine/ledger-attack-spreads-to-eu-ai-finds-18-trillion-xrp-bug-hodlers-digest": "2026-10-11T23:25:22.104690+00:00",
   "https://cointelegraph.com/markets/bitcoin-consolidates-crypto-weathers-ledger-theft-reports": "2026-10-09T15:38:52.497425+00:00",
   "https://cointelegraph.com/markets/bitcoin-drops-22-as-ukraine-iran-strikes-send-oil-toward-one-month-high": "2026-10-12T16:52:14.727425+00:00",
@@ -193,6 +199,7 @@
   "https://cointelegraph.com/news/aptos-rolls-out-encrypted-mempool-to-curb-frontrunning-sandwich-attacks": "2026-10-13T01:10:27.990853+00:00",
   "https://cointelegraph.com/news/australia-asic-crypto-settled-cfd-protections": "2026-10-12T11:59:04.761733+00:00",
   "https://cointelegraph.com/news/binance-shut-down-crypto-mining-pool-november": "2026-10-13T05:49:37.609556+00:00",
+  "https://cointelegraph.com/news/bis-digital-cash-privacy-bank-data-breaches": "2026-10-13T13:46:25.736715+00:00",
   "https://cointelegraph.com/news/bitcoin-miners-ai-financing-costs-debt-funding-gap": "2026-10-12T17:17:03.632338+00:00",
   "https://cointelegraph.com/news/blockchain-cftc-approval-derivatives-prediction-markets": "2026-10-09T16:48:35.253236+00:00",
   "https://cointelegraph.com/news/blur-is-shutting-down-its-website-so-why-are-nft-collectors-cheering": "2026-10-13T05:49:37.609550+00:00",
@@ -233,7 +240,6 @@
   "https://cointelegraph.com/news/xrp-ledger-defends-emergency-patch-for-unlimited-xrp-bug": "2026-10-12T01:32:22.163696+00:00",
   "https://cointelegraph.com/news/xrp-treasury-evernorth-rise-nasdaq-opening": "2026-10-12T14:53:40.198969+00:00",
   "https://decrypt.co/?p=380484": "2026-10-12T16:04:38.124756+00:00",
-  "https://decrypt.co/?p=380574": "2026-10-09T13:32:27.957640+00:00",
   "https://decrypt.co/?p=380582": "2026-10-09T15:38:52.497455+00:00",
   "https://decrypt.co/?p=380585": "2026-10-09T16:48:35.253271+00:00",
   "https://decrypt.co/?p=380592": "2026-10-09T16:23:03.384510+00:00",
