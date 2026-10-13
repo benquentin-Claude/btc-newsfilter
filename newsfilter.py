@@ -278,7 +278,8 @@ def main():
 
     state = load_state()
     run_calendar(state, args.dry_run)
-    run_news(state, args.dry_run, min_importance)
+    if (os.environ.get("NEWS") or "1") != "0":   # Variable NEWS=0 schaltet die Krypto-News ab, Termine und Wächter laufen weiter
+        run_news(state, args.dry_run, min_importance)
     if not args.dry_run:
         save_state(state)
 

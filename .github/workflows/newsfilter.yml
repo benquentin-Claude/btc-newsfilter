@@ -44,6 +44,7 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           MIN_IMPORTANCE: ${{ vars.MIN_IMPORTANCE }}
           CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          NEWS: ${{ vars.NEWS }}
       - name: Zustand speichern
         if: ${{ !inputs.test_ai }}
         run: |

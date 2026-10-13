@@ -22,6 +22,7 @@ Bei jedem Lauf prüft `waechter.py` zusätzlich, ob ein getrennt laufender Hande
 | `ANTHROPIC_API_KEY` | Secret | API-Schlüssel von console.anthropic.com |
 | `NTFY_TOPIC` | Secret | geheimer Kanalname bei ntfy (wer ihn kennt, kann mitlesen) |
 | `BOT_HEARTBEAT_TOPIC` | Secret | geheimer ntfy-Kanal mit dem Herzschlag des Handels-Bots (optional) |
+| `NEWS` | Variable | `0` schaltet die Krypto-News ab. Wirtschaftstermine und Wächter laufen weiter |
 | `MIN_IMPORTANCE` | Variable | ab welcher Wichtigkeit gemeldet wird (1–5, Standard 4) |
 | `CLAUDE_MODEL` | Variable | Modell für die Bewertung (Standard `claude-haiku-5-5`, genauer: `claude-sonnet-5-5` oder `claude-opus-5-5`) |
 
