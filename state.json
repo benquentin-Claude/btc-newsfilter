@@ -1,10 +1,6 @@
 {
  "alerts": [
   {
-   "summary": "Bitcoin fällt unter 82.000 $, und innerhalb von 24 Stunden werden Krypto-Liquidationen von 771 Mio. $ gemeldet, davon 685,6 Mio. $ Longpositionen.",
-   "time": "2026-10-13T02:03:10.286484+00:00"
-  },
-  {
    "summary": "Ein Wal bewegt nach sechs Jahren Ruhe BTC im Wert von rund 378 Mio. $, was Verkaufsdruck signalisieren könnte.",
    "time": "2026-10-13T04:31:02.878499+00:00"
   },
@@ -170,9 +166,6 @@
   "f0366744-3d6f-467b-bb28-8e391f50ff1d": "2026-10-12T15:44:17.234471+00:00",
   "f0c10ca7-ee9b-46e8-9186-4bf11dd551ca": "2026-10-11T16:26:24.714675+00:00",
   "f8e752d9-8b7d-5e6d-8ceb-475c4467e8d0": "2026-10-12T09:52:43.721585+00:00",
-  "https://bitcoinmagazine.com/?p=55735": "2026-10-09T13:56:46.753764+00:00",
-  "https://bitcoinmagazine.com/?p=55740": "2026-10-09T13:56:46.753758+00:00",
-  "https://bitcoinmagazine.com/?p=55743": "2026-10-09T13:56:46.753751+00:00",
   "https://bitcoinmagazine.com/?p=55748": "2026-10-09T16:48:35.253278+00:00",
   "https://bitcoinmagazine.com/?p=55752": "2026-10-09T17:25:40.342404+00:00",
   "https://bitcoinmagazine.com/?p=55756": "2026-10-09T20:15:05.895312+00:00",
@@ -189,13 +182,13 @@
   "https://bitcoinmagazine.com/?p=55798": "2026-10-13T11:23:13.702359+00:00",
   "https://bitcoinmagazine.com/?p=55808": "2026-10-13T13:46:25.775125+00:00",
   "https://bitcoinmagazine.com/?p=55811": "2026-10-13T13:46:25.775102+00:00",
-  "https://cointelegraph.com/magazine/france-is-worlds-most-dangerous-place-for-bitcoiners-90-attacks-in-7-months": "2026-10-09T13:56:46.753717+00:00",
   "https://cointelegraph.com/magazine/is-bitcoin-kidding-itself-about-the-lightning-network": "2026-10-13T13:46:25.736672+00:00",
   "https://cointelegraph.com/magazine/ledger-attack-spreads-to-eu-ai-finds-18-trillion-xrp-bug-hodlers-digest": "2026-10-11T23:25:22.104690+00:00",
   "https://cointelegraph.com/markets/bitcoin-consolidates-crypto-weathers-ledger-theft-reports": "2026-10-09T15:38:52.497425+00:00",
   "https://cointelegraph.com/markets/bitcoin-drops-22-as-ukraine-iran-strikes-send-oil-toward-one-month-high": "2026-10-12T16:52:14.727425+00:00",
   "https://cointelegraph.com/markets/bitcoin-hits-84k-resistance-as-korea-tech-sell-off-sends-kospi-down-74": "2026-10-13T09:49:37.943263+00:00",
   "https://cointelegraph.com/markets/btc-price-support-holds-ahead-of-us-cpi-data-three-things-to-know-in-bitcoin-this-week": "2026-10-12T11:30:17.569304+00:00",
+  "https://cointelegraph.com/news/anthropic-ai-worms-autonomously-spread-devices-virus": "2026-10-13T14:08:57.035706+00:00",
   "https://cointelegraph.com/news/aptos-rolls-out-encrypted-mempool-to-curb-frontrunning-sandwich-attacks": "2026-10-13T01:10:27.990853+00:00",
   "https://cointelegraph.com/news/australia-asic-crypto-settled-cfd-protections": "2026-10-12T11:59:04.761733+00:00",
   "https://cointelegraph.com/news/binance-shut-down-crypto-mining-pool-november": "2026-10-13T05:49:37.609556+00:00",
