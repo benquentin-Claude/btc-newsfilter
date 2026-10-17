@@ -92,10 +92,7 @@
   }
  ],
  "calendar_fetched": "2026-10-17T19:00:24.211718+00:00",
- "seen": {
-  "https://cointelegraph.com/news/trezor-preventative-steps-wallet-tampering-reports": "2026-10-13T19:46:50.782204+00:00",
-  "https://decrypt.co/?p=380867": "2026-10-13T19:46:50.782241+00:00"
- },
+ "seen": {},
  "warned": [
   "2026-10-14T08:30:00-04:00|Core CPI m/m",
   "2026-10-14T08:30:00-04:00|Core CPI y/y",
