@@ -17,8 +17,49 @@
    "time": "2026-10-13T13:46:25.736734+00:00"
   }
  ],
- "calendar": [],
- "calendar_fetched": "2026-10-25T04:27:42.493442+00:00",
+ "calendar": [
+  {
+   "country": "USD",
+   "date": "2026-10-28T14:00:00-04:00",
+   "forecast": "4.00%",
+   "impact": "High",
+   "previous": "4.00%",
+   "title": "Federal Funds Rate"
+  },
+  {
+   "country": "USD",
+   "date": "2026-10-28T14:00:00-04:00",
+   "forecast": "",
+   "impact": "High",
+   "previous": "",
+   "title": "FOMC Statement"
+  },
+  {
+   "country": "USD",
+   "date": "2026-10-28T14:30:00-04:00",
+   "forecast": "",
+   "impact": "High",
+   "previous": "",
+   "title": "FOMC Press Conference"
+  },
+  {
+   "country": "USD",
+   "date": "2026-10-29T08:30:00-04:00",
+   "forecast": "3.2%",
+   "impact": "High",
+   "previous": "1.5%",
+   "title": "Advance GDP q/q"
+  },
+  {
+   "country": "USD",
+   "date": "2026-10-29T08:30:00-04:00",
+   "forecast": "0.3%",
+   "impact": "High",
+   "previous": "0.2%",
+   "title": "Core PCE Price Index m/m"
+  }
+ ],
+ "calendar_fetched": "2026-10-25T05:36:46.363452+00:00",
  "seen": {},
  "warned": [
   "2026-10-14T08:30:00-04:00|Core CPI m/m",
