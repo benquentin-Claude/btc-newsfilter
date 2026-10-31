@@ -6,7 +6,7 @@ Wirtschaftskalender, lässt neue Meldungen von Claude bewerten und schickt
 wichtige per ntfy aufs Handy und den Mac.
 
 Umgebungsvariablen:
-  ANTHROPIC_API_KEY   API-Schlüssel (GitHub-Secret)
+  ANTHROPIC_API_KEY   API-Schlüssel, nur ohne Föderation nötig (siehe claude_zugang.py)
   NTFY_TOPIC          geheimer ntfy-Kanalname (GitHub-Secret)
   MIN_IMPORTANCE      ab welcher Wichtigkeit (1–5) gemeldet wird, Standard 4
   CLAUDE_MODEL        Modell, Standard claude-haiku-5-5
@@ -25,6 +25,8 @@ import sys
 import urllib.request
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
+import claude_zugang
 
 import feedparser
 
@@ -137,9 +139,7 @@ def fetch_news():
 
 def classify(items, recent_alerts=()):
     """Bewertet Meldungen in einem einzigen Aufruf. Gibt {id: Bewertung} zurück."""
-    import anthropic
-
-    client = anthropic.Anthropic()
+    client = claude_zugang.client()
     model = os.environ.get("CLAUDE_MODEL") or DEFAULT_MODEL
     lines = [{"id": str(n), "quelle": i["source"], "titel": i["title"], "text": i["summary"]}
              for n, i in enumerate(items)]
@@ -200,7 +200,7 @@ def run_news(state, dry_run, min_importance):
     if not unique:
         return
 
-    if dry_run and not os.environ.get("ANTHROPIC_API_KEY"):
+    if dry_run and not (os.environ.get("ANTHROPIC_API_KEY") or claude_zugang.foederation_aktiv()):
         for i in unique:
             print(f"  (ohne KI) {i['source']}: {i['title']}")
         return

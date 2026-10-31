@@ -16,6 +16,7 @@ concurrency:
 
 permissions:
   contents: write             # state.json zurückschreiben
+  id-token: write             # Anmeldung bei Claude ohne festen Schlüssel (claude_zugang.py)
 
 jobs:
   run:
@@ -41,6 +42,10 @@ jobs:
       - run: python newsfilter.py ${{ inputs.test_ai && '--test-ai' || '' }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_FEDERATION_RULE_ID: ${{ vars.ANTHROPIC_FEDERATION_RULE_ID }}
+          ANTHROPIC_ORGANIZATION_ID: ${{ vars.ANTHROPIC_ORGANIZATION_ID }}
+          ANTHROPIC_SERVICE_ACCOUNT_ID: ${{ vars.ANTHROPIC_SERVICE_ACCOUNT_ID }}
+          ANTHROPIC_WORKSPACE_ID: ${{ vars.ANTHROPIC_WORKSPACE_ID }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           MIN_IMPORTANCE: ${{ vars.MIN_IMPORTANCE }}
           CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
