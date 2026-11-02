@@ -37,7 +37,7 @@
   {
    "country": "USD",
    "date": "2026-11-06T08:30:00-05:00",
-   "forecast": "63K",
+   "forecast": "65K",
    "impact": "High",
    "previous": "29K",
    "title": "Non-Farm Employment Change"
@@ -51,7 +51,7 @@
    "title": "Unemployment Rate"
   }
  ],
- "calendar_fetched": "2026-11-02T20:26:12.533244+00:00",
+ "calendar_fetched": "2026-11-02T21:59:41.692806+00:00",
  "seen": {},
  "warned": [
   "2026-10-14T08:30:00-04:00|Core CPI m/m",
